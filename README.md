@@ -40,6 +40,11 @@ module "s3_bucket" {
 |------|-------------|
 | bucket_id | The name of the bucket |
 | bucket_arn | The ARN of the bucket |
+| bucket_domain_name | The bucket's global S3 endpoint hostname |
+| bucket_regional_domain_name | The bucket's regional S3 endpoint hostname |
+| bucket_hosted_zone_id | The Route53 hosted zone ID for the bucket's S3 endpoint |
+| region | Region where the bucket is created |
+| bucket_tags | All tags applied to the bucket (including provider defaults) |
 
 ## Requirements
 
