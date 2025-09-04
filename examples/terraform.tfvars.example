@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and customize the values
+
+# AWS Configuration
+aws_region = "us-east-1"
+aws_profile = "default"         # or leave empty to use env vars
+# If not using a profile, you can set keys here (not recommended). Prefer env vars.
+aws_access_key    = ""
+aws_secret_key    = ""
+aws_session_token = ""
+
+# S3 Bucket Configuration
+bucket_name = "my-docker-desktop-bucket"  # Must be globally unique
+acl         = "private"
+
+# Project Configuration
+environment  = "dev"
+project_name = "docker-desktop-terraform"
+
+# Optional: Bucket Policy for Docker Desktop
+create_bucket_policy = false
+vpc_endpoint_id      = ""  # Leave empty for public access
+
+# Docker (optional)
+enable_docker = true
+# On Windows with Docker Desktop, the default named pipe is used if empty.
+# If needed, set explicitly: npipe:////./pipe/docker_engine
+docker_host = ""
