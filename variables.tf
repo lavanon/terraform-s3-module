@@ -20,3 +20,15 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "use_localstack" {
+  description = "If true, target LocalStack instead of AWS"
+  type        = bool
+  default     = true
+}
+
+variable "localstack_endpoint" {
+  description = "LocalStack endpoint URL for S3"
+  type        = string
+  default     = "http://localhost:4566"
+}
